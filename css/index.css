@@ -1,0 +1,38 @@
+@charset "utf-8";
+
+*{ margin:0; padding:0; list-style:none;}
+a{ text-decoration: none;}
+
+#container{height:auto;}
+.row{width:100%; height:50px; background:#000; text-align: center; position: relative; float: left;}
+div.logo{float: left;width: 10%;}
+div.logo img{width:83px; height:30px;  margin:10px 15px;}
+.navigation{text-align:center;width: 90%; float: left;}
+.navigation ul{ line-height: 50px;width:100%; padding:0 10%;}
+.row ul li{float:left;}
+.row ul li:hover{ background:#222;}
+.row ul li a{width: 100%; padding: 0 10px; }
+
+.RowChild{width: 100%; display: block; background:#222; opacity:.5; text-align: center; 
+	position:static; left: 0;top: 0; z-index: 999;}
+.RowChild ul{display: none;}
+.RowChild ul.activeChild{display: none;} 
+.RowChild ul li{float: left; height: 100px;width: 151px; margin:5px 5px; }
+.RowChild ul li a image{width:151px; height:86px;  opacity: 1;}
+
+/*#main*/
+#main{position:relative; height: 718px;top:50px;background:gray; opacity: .5;}
+/*#main div{float: left;}*/
+.MainBox{position: absolute; width: 100%;}
+#main img{width: 110%;height: 110%; top:-5%; left: -5%; display: none;}
+.LMain{width: 66.667%; height: 100%; overflow:hidden; background:red; opacity: .5;}
+.RMain{width:33.332%; float: left; overflow:hidden;}
+.imgTop{float: left;}
+.BLImg{width: 50%;}
+span.imgTop{ z-index: 999; size:50px; position: relative; display: none;}
+
+#bottom{height:588px;width: 100%;text-align:center; background:#222; float: left; position: relative;}
+#bottom h3{font-size: 19px; background:#000; color:#FFF;}
+#bottom a{color: #666666;}
+.BottomRow{text-align: center; width: 100%;}
+.hDiv{float:left; padding: 5px 5%;}

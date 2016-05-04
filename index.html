@@ -1,85 +1,132 @@
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
-	<title>Document</title>
-	<style>
-	
-	div{width: 100px; height: 100px; background: #ccc; margin: 50px; float: left;}
-	#div1{width: 150px; height: 150px;background: red; position: absolute; bottom: 0;right: 0; margin: 0;}
-	</style>
-	<script>
-	window.onload=function(){
-		var oDiv=document.getElementById('div1');
-		var aDiv=document.getElementsByTagName('div');
-		//collTest(oDiv,aDiv[1]);
-
-		
-
-		oDiv.onmousedown=function(ev){
-			oEvt=ev||event;
-			var disX=oEvt.clientX-oDiv.offsetLeft;
-			var disY=oEvt.clientY-oDiv.offsetTop;
-
-			document.onmousemove=function(ev){
-				oEvt=ev||event;
-				oDiv.style.left=oEvt.clientX-disX+'px';
-				oDiv.style.top=oEvt.clientY-disY+'px';
-
-				//碰撞检测
-				for(var i=0;i<aDiv.length;i++){
-					if(oDiv==aDiv[i]) continue;
-					else{
-						if(collTest(oDiv,aDiv[i])){
-							aDiv[i].style.background='green';
-							//break;
-						}else{
-							aDiv[i].style.background='#ccc';
-						}
-					}
-				}
-			}
-			document.onmouseup=function(ev){
-				document.onmousemove=null;
-				document.onmouseup=null;
-				oDiv.releaseCapture&&oDiv.releaseCapture();
-			}
-			oDiv.setCapture&& oDiv.setCapture();
-			return false;
-		}
-
-		//封装碰撞方法
-		function collTest(obj1,obj2){
-			var l1=obj1.offsetLeft;
-			var t1=obj1.offsetTop;
-			var r1=obj1.offsetLeft+obj1.offsetWidth;
-			var b1=obj1.offsetTop+obj1.offsetHeight;
-
-			var l2=obj2.offsetLeft;
-			var t2=obj2.offsetTop;
-			var r2=obj2.offsetLeft+obj2.offsetWidth;
-			var b2=obj2.offsetTop+obj2.offsetHeight;
-
-			if(l1>r2||t1>b2||r1<l2||b1<t2){
-				return false;
-			}else{
-				return true;
-			}
-		}
-	}
-	</script>
+	<title>意大利奢侈品牌芬迪FENDI官网</title>
+	<!--<style type="text/css">
+	</style>-->
+    
+	<link href="css/index.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div id="div1"></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
-	<div></div>
+	<div id="container">
+		<div class="row">
+			<div class="logo">
+				<a href="index.html">
+					<img src="images/logo.png">
+				</a>
+			</div>
+			<div class="navigation">
+				<ul>
+					<li><a href="#">首页</a></li>
+					<li class="hasChild"><a href="#">发现更多产品</a></li>
+					<li class="hasChild"><a href="#">时尚新闻</a></li>
+					<li class="hasChild"><a href="#">芬迪精髓</a></li>
+					<li class="hasChild"><a href="#">经典系列</a></li>
+					<li><a href="#">查找芬迪门店</a></li>
+				</ul>
+			</div>				
+		</div>
+		<div class="RowChild">
+			<ul id="1" class="activeChild">
+				<li> <a href=""><img src="images/women_160329.jpg">女士</a></li>
+				<li> <a href=""><img src="images/men_160329.jpg">男士</a></li>
+				<li> <a href=""><img src="images/eyeshine_160414.jpg">墨镜</a></li>
+				<li> <a href=""><img src="images/timepieces_151_86_151023.jpg">手表</a></li>
+				<li> <a href=""><img src="images/kids_2016ss.jpg">童装</a></li>
+				<li> <a href=""><img src="images/furniture.jpg">家居系列</a></li>
+				<li> <a href=""><img src="images/furcollection_subnav.jpg">皮草系列</a></li>
+			</ul>
+            <ul id="2">
+				<li> <a href=""><img src="images/151-86.jpg">EYESHINE墨镜系列</a></li>
+				<li> <a href=""><img src="images/navigation_fw1602.jpg">2016-17秋冬女装时装秀</a></li>
+				<li> <a href=""><img src="images/advcamp-v4.jpg">2016女士春夏广告大片</a></li>
+				<li> <a href=""><img src="images/navigation_menfw_160125.jpg">2016-17秋冬男装时装秀</a></li>
+				<li> <a href=""><img src="images/header_151_86_150925.jpg">2016春夏女装时装秀</a></li>
+				<li> <a href=""><img src="images/men_151_86_150706.jpg">2016春夏男装时装秀</a></li>
+			</ul>
+            <ul id="3">
+				<li> <a href=""><img src="images/pinpaigushi_img_141210.jpg">品牌故事</a></li>
+				<li> <a href=""><img src="images/mto.jpg">艺匠定制</a></li>
+				<li> <a href=""><img src="images/qingxilingquan_img_141210.jpg">情系灵泉</a></li>
+				<li> <a href=""><img src="images/design_main_img_n1_141218.jpg">时尚设计</a></li>
+			</ul>
+            <ul id="4">
+				<li> <a href=""><img src="images/nav-fur1.jpg">皮草工坊</a></li>
+				<li> <a href=""><img src="images/subnav-peekaboo.jpg">PEEKABOO</a></li>
+				<li> <a href=""><img src="images/nav-selleria1.jpg">SELLERIA</a></li>
+				<li> <a href=""><img src="images/timepieces_151_86_151023.jpg">BAGUETTE</a></li>
+			</ul>
+		</div>			
+		<div id="main">
+			<div class="MainBox">
+				<div class="LMain"><img src="images/pc_916_740.jpg"><span class="imgTop">FLOWERRLAND<br>走进繁花似锦的梦幻世界</span></div>
+				<div class="FRight RMain">
+					<div class="imgTop"><img src="images/pc_455_240.jpg"><span class="imgTop">EYESHINE墨镜系列<br>魅目生辉 绚光闪耀</span></div>
+					<div class="imgB">
+						<div class="BLImg"><img src="images/pc_226_495.jpg"><span class="imgTop">MAN'S<br>COLLECTION<br>2015春夏男士系列</span></div>
+						<div class="BLImg" >
+							<div class="imgTop"><img src="images/pc_225_214.jpg"><span class="imgTop">LACE-UP<br>巧匠之思 束带之美</span></div>
+							<div class="imgB"><img src="images/pc_225_276.jpg"><span class="imgTop">WOMWN'S BAGS<br>女士新款箱包</span></div>
+						</div>
+					</div>
+				</div>
+			</div>			
+		</div>
+		
+		<div id="bottom">
+			<div class="BottomRow">
+				<div class="hDiv">
+					<h3><a href="">女士产品</a></h3>
+					<ul>
+						<li><a href="">女士手袋</a></li>
+						<li><a href="">女士小型皮具</a></li>
+						<li><a href="">女鞋</a></li>
+						<li><a href="">女士皮带</a></li>
+						<li><a href="">时尚配饰</a></li>
+					</ul>
+				</div>
+				<div class="hDiv">
+					<h3><a href="">男士产品</a></h3>
+					<ul>
+						<li><a href="">男士手袋</a></li>
+						<li><a href="">男士小型皮具</a></li>
+						<li><a href="">男鞋</a></li>
+						<li><a href="">男士皮带</a></li>
+						<li><a href="">男士配饰</a></li>
+					</ul>
+				</div>
+				<div class="hDiv">
+					<h3><a href="">时尚新闻</a></h3>
+					<ul>
+						<li><a href="">EYESHINE墨镜系列</a></li>
+						<li><a href="">2016-17秋冬女装时装秀</a></li>
+						<li><a href="">2016女士春夏广告大片</a></li>
+						<li><a href="">2016-17秋冬男装时装秀</a></li>
+						<li><a href="">2016春夏女装时装秀</a></li>
+					</ul>
+				</div>
+				<div class="hDiv">
+					<h3><a href="">芬迪专卖店</a></h3>
+					<ul>
+						<li><a href="">上海旗舰店</a></li>
+						<li><a href="">北京旗舰店</a></li>
+						<li><a href="">香港旗舰店</a></li>
+						<li><a href="">米兰旗舰店</a></li>
+						<li><a href="">巴黎旗舰店</a></li>
+					</ul>
+				</div>
+			</div>
+			<div ></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
+	<div id="middle"></div>
+
 </body>
 </html>
